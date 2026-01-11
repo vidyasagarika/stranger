@@ -1,0 +1,102 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url('/images/will1.webp');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* MISSING IN YOUR CODE */
+.hero-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* FIRE REVEAL */
+.fire-reveal {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/v1.png');
+  background-size: cover;
+  background-position: 40% 7%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+
+  mask-image:
+    radial-gradient(circle 400px at var(--x) var(--y),
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,0.6) 40%,
+      transparent 70%);
+  -webkit-mask-image:
+    radial-gradient(circle 400px at var(--x) var(--y),
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,0.6) 40%,
+      transparent 70%);
+}
+
+.fire-reveal.active {
+  opacity: 1;
+}
+
+/* LEFT CONTENT */
+.left {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left h1 {
+  font-size: 70px;
+  color: #ff2c2c;
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.left p {
+  font-size: 18px;
+  color: #e6e6e6;
+}
+
+.left button {
+  font-size: 18px;
+  padding: 14px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  border: 1px solid red;
+  cursor: pointer;
+}
+
+/* RIGHT CONTENT */
+.right {
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right h1 {
+  font-size: 60px;
+  width: 470px;
+  color: #ff2c2c;
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.right p {
+  font-size: 20px;
+  width: 420px;
+  color: #e6e6e6;
+}
